@@ -37,14 +37,34 @@ testStart.addEventListener('click', () => {
     if (countsAsAYes(answer1)) rightAnswers++;
     console.log('first answer: ' + answer1);
 
+    //second question
+    const answer2 = prompt('Based off the reading, can you buy lobster mushrooms globally?');
+    if (!countsAsAYes(answer2)) rightAnswers++;
+    console.log('first answer: ' + answer2);
+
+    //third question
+    const answer3 = prompt('Is the lobster mushroom toxic?');
+    if (!countsAsAYes(answer3)) rightAnswers++;
+
+
     //calulate results message
     alert('okay, calculating your score');
 
     if(rightAnswers <= 1){
         result.style.visibility = 'visible';
         scoreDisplay.textContent = `You scored ${rightAnswers}/ 3 `;
-        
-    } 
+        scoreDisplay.style.color = 'red';
+    } else if (rightAnswers === 2) {
+        result.style.visibility = 'visible';
+        scoreDisplay.textContent = `You scored ${rightAnswers}/ 3 `;
+        scoreDisplay.style.color = 'yellow';
+    } else if (rightAnswers === 3){
+        result.style.visibility = 'visible';
+        scoreDisplay.textContent = `You scored ${rightAnswers}/ 3 `;
+        scoreDisplay.style.color = 'green';
+        scoreDisplay.style.fontSize = '1.4rem';
+    }
+
 
 
     
