@@ -26,6 +26,12 @@ testStart.addEventListener('click', () => {
     console.log(lastName);
     if (!lastName) return;
 
+    //confirm that user wants to take part in the test
+    const confirmation = confirm(`Alright ${firstName} ${lastName} are you ready for a quiz? Ok or cancel:`);
+    console.log(confirmation);
+    if (!confirmation) return;
+
+
     
     
 });
