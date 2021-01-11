@@ -37,6 +37,14 @@ testStart.addEventListener('click', () => {
     if (countsAsAYes(answer1)) rightAnswers++;
     console.log('first answer: ' + answer1);
 
+    //calulate results message
+    alert('okay, calculating your score');
+
+    if(rightAnswers <= 1){
+        result.style.visibility = 'visible';
+        scoreDisplay.textContent = `You scored ${rightAnswers}/ 3 `;
+        
+    } 
 
 
     
