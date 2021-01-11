@@ -81,11 +81,11 @@ header img {
 
 
 content {
-    width: 80%;
+    width: 95%;
 }
 
 p {
-    margin: var(--gutter);
+    font-size: 1.4rem;
 }
   
 footer {
@@ -117,3 +117,7 @@ footer {
     }
 
   }
+
+.hide {
+    visibility: hidden;
+}

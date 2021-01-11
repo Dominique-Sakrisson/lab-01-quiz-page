@@ -1,7 +1,31 @@
 // import functions and grab DOM elements
+
 import {countsAsAYes} from './utils.js';
 
 // initialize state
 const testStart = document.getElementById('test-button');
-console.log(testStart);
-// set event listeners to update state and DOM
+const result = document.getElementById('result-message');
+const scoreDisplay = document.getElementById('results-score');
+
+const tryAgain = 'Hit the button for another try';
+
+testStart.addEventListener('click', () => {
+// set event listeners to update state and testHandler(event)
+//variable to count the user's correct answer count
+    let rightAnswers = 0;
+
+    //alert user welcoming to the test
+    alert('hello welcome to your test');
+
+    //get the users first name
+    const firstName = prompt('So nice to meet you, whats your name?');
+    if (!firstName) return;
+
+    //prompt user for their last name
+    const lastName = prompt(`Hello ${firstName} what is your last name?`);
+    console.log(lastName);
+    if (!lastName) return;
+
+    
+    
+});
