@@ -31,6 +31,13 @@ testStart.addEventListener('click', () => {
     console.log(confirmation);
     if (!confirmation) return;
 
+    alert('Here you go, answer with y / n anything else is automatic miss');
+    //first question
+    const answer1 = prompt('Is the lobster mushroom a parasitic fungus?');
+    if (countsAsAYes(answer1)) rightAnswers++;
+    console.log('first answer: ' + answer1);
+
+
 
     
     
