@@ -4,10 +4,8 @@ import { countsAsAYes } from './utils.js';
 
 // initialize state
 const testStart = document.getElementById('test-button');
-
 const result = document.getElementById('result-message');
 const scoreDisplay = document.getElementById('results-score');
-
 const scoreBad = 'Hit the button for another try';
 const scoreOk = 'hey almost there, try to get a 100!';
 const scoreGreat = 'You have the highest knowledge';
@@ -49,26 +47,21 @@ testStart.addEventListener('click', () => {
     //calulate results message
     alert('okay, calculating your score');
 
-    
     if (rightAnswers <= 1){
-        
         result.style.visibility = 'visible';
         percentCorrect = ((rightAnswers / 3) * 100).toFixed(0) + '%';
-        scoreDisplay.textContent = `You scored ${percentCorrect} with ${rightAnswers}/ 3 correct answers ${scoreBad}`;
+        scoreDisplay.textContent = `${firstName} ${lastName} you scored ${percentCorrect} with ${rightAnswers}/ 3 correct answers ${scoreBad}`;
         scoreDisplay.style.color = 'red';
     } else if (rightAnswers === 2) {
-        
         scoreDisplay.classList.add('acceptable');
         result.style.visibility = 'visible';
         percentCorrect = ((rightAnswers / 3) * 100).toFixed(0) + '%';
-        scoreDisplay.textContent = `You scored ${percentCorrect} with ${rightAnswers}/ 3 correct answers ${scoreOk}`;
-        
+        scoreDisplay.textContent = `${firstName} ${lastName} you scored ${percentCorrect} with ${rightAnswers}/ 3 correct answers ${scoreOk}`;
     } else if (rightAnswers === 3){
-        
         scoreDisplay.classList.add('celebrate');
         result.style.visibility = 'visible';
         percentCorrect = ((rightAnswers / 3) * 100).toFixed(0) + '%';
-        scoreDisplay.textContent = `You scored ${percentCorrect} with ${rightAnswers}/ 3 correct answers ${scoreGreat}`;
+        scoreDisplay.textContent = `${firstName} ${lastName} you scored ${percentCorrect} with ${rightAnswers}/ 3 correct answers ${scoreGreat}`;
         scoreDisplay.style.color = 'green';
         scoreDisplay.style.fontSize = '1.4rem';
     }
