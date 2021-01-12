@@ -1,1 +1,2 @@
-import {countsAsAYes} from '../utils.js';
+
+import './example.test.js';
