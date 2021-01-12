@@ -73,8 +73,6 @@ header img {
     height: var(--header-height);
 }
 
-
-
 p {
     font-size: 1.4rem;
     font-family: 'Texturina', serif;
@@ -90,25 +88,6 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
-  
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
-    }
-
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
-
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
-
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
-
-  }
 
 .hide {
     visibility: hidden;
@@ -116,14 +95,6 @@ footer {
 
 .bg-blue{
     background-color: blue;
-}
-
-.wrong{
-    padding: 20px;
-    border: 5px solid black;
-    width: 100px;
-    background-color: red;
-    font-size: 1.4rem;
 }
 
 .acceptable{
@@ -147,8 +118,6 @@ h1 h2{
     display: inline-block;
     font-family: 'Texturina', serif;
 }
-
-
 
 a{
     font-family: 'Cantarell', sans-serif;

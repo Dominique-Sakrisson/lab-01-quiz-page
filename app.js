@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
 
-import {countsAsAYes} from './utils.js';
+import { countsAsAYes } from './utils.js';
 
 // initialize state
 const testStart = document.getElementById('test-button');
@@ -49,17 +49,18 @@ testStart.addEventListener('click', () => {
     //calulate results message
     alert('okay, calculating your score');
 
+    
     if (rightAnswers <= 1){
         
         result.style.visibility = 'visible';
-        percentCorrect = ((rightAnswers / 3) * 100).toFixed(0)+ '%';
+        percentCorrect = ((rightAnswers / 3) * 100).toFixed(0) + '%';
         scoreDisplay.textContent = `You scored ${percentCorrect} with ${rightAnswers}/ 3 correct answers ${scoreBad}`;
         scoreDisplay.style.color = 'red';
     } else if (rightAnswers === 2) {
         
         scoreDisplay.classList.add('acceptable');
         result.style.visibility = 'visible';
-        percentCorrect = ((rightAnswers / 3) * 100).toFixed(0)+ '%';
+        percentCorrect = ((rightAnswers / 3) * 100).toFixed(0) + '%';
         scoreDisplay.textContent = `You scored ${percentCorrect} with ${rightAnswers}/ 3 correct answers ${scoreOk}`;
         
     } else if (rightAnswers === 3){
